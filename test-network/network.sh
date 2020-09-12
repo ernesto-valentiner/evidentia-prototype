@@ -30,7 +30,7 @@ function printHelp() {
   echo
   echo "    Flags:"
   echo "    -ca <use CAs> -  create Certificate Authorities to generate the crypto material"
-  echo "    -c <channel name> - channel name to use (defaults to \"mychannel\")"
+  echo "    -c <channel name> - channel name to use (defaults to \"fgs-channel\")"
   echo "    -s <dbtype> - the database backend to use: goleveldb (default) or couchdb"
   echo "    -r <max retry> - CLI times out after certain number of attempts (defaults to 5)"
   echo "    -d <delay> - delay duration in seconds (defaults to 3)"
@@ -50,7 +50,7 @@ function printHelp() {
   echo "	network.sh up"
   echo
   echo " Examples:"
-  echo "  network.sh up createChannel -ca -c mychannel -s couchdb -i 2.0.0"
+  echo "  network.sh up createChannel -ca -c fgs-channel -s couchdb -i 2.0.0"
   echo "  network.sh createChannel -c channelName"
   echo "  network.sh deployCC -l javascript"
 }
@@ -497,8 +497,8 @@ CRYPTO="cryptogen"
 MAX_RETRY=5
 # default for delay between commands
 CLI_DELAY=3
-# channel name defaults to "mychannel"
-CHANNEL_NAME="mychannel"
+# channel name defaults to "fgs-channel"
+CHANNEL_NAME="fgs-channel"
 # use this as the default docker-compose yaml definition
 COMPOSE_FILE_BASE=docker/docker-compose-test-net.yaml
 # docker-compose.yaml file if you are using couchdb

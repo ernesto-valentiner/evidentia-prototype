@@ -26,4 +26,4 @@ echo "Org2:" ${ORG2}
 echo "Org3:" ${ORG3}
 echo "Org4:" ${ORG4}
 echo "Org5:" ${ORG5}
-echo "Org5:" ${ORG6}
+echo "Org6:" ${ORG6}

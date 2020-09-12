@@ -44,7 +44,7 @@ async function main() {
         await gateway.connect(ccp, { wallet, identity: username, discovery: { enabled: true, asLocalhost: true } });
 
         // Get the network (channel) our contract is deployed to.
-        const network = await gateway.getNetwork('mychannel');
+        const network = await gateway.getNetwork('fgs-channel');
 
         // Get the contract from the network.
         const contract = network.getContract('evidentia');
@@ -52,7 +52,7 @@ async function main() {
         // Evaluate the specified transaction.
         // queryCar transaction - requires 1 argument, ex: ('queryCar', 'CAR4')
         // queryAllCars transaction - requires no arguments, ex: ('queryAllCars')
-        const result = await contract.evaluateTransaction('queryProvidersByServiceName', 'infer');
+        const result = await contract.evaluateTransaction('requestServiceProvider', 'verification', '/invoke.js P1');
         console.log(`Transaction has been evaluated, result is: ${result.toString()}`);
 
     } catch (error) {

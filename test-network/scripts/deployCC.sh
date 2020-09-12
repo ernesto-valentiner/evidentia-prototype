@@ -5,7 +5,7 @@ VERSION="$3"
 DELAY="$4"
 MAX_RETRY="$5"
 VERBOSE="$6"
-: ${CHANNEL_NAME:="mychannel"}
+: ${CHANNEL_NAME:="fgs-channel"}
 : ${CC_SRC_LANGUAGE:="golang"}
 : ${VERSION:="1"}
 : ${DELAY:="3"}
@@ -289,12 +289,20 @@ checkCommitReadiness 2 "\"Org1MSP\": true" "\"Org2MSP\": true"
 
 ## now approve also for org3
 approveForMyOrg 3
+
+checkCommitReadiness 3 "\"Org1MSP\": true" "\"Org2MSP\": true" "\"Org3MSP\": true"
 ## now approve also for org4
 approveForMyOrg 4
+
+checkCommitReadiness 4 "\"Org1MSP\": true" "\"Org2MSP\": true" "\"Org3MSP\": true" "\"Org4MSP\": true"
 ## now approve also for org5
 approveForMyOrg 5
+
+checkCommitReadiness 5 "\"Org1MSP\": true" "\"Org2MSP\": true" "\"Org3MSP\": true" "\"Org4MSP\": true" "\"Org5MSP\": true"
 ## now approve also for org6
 approveForMyOrg 6
+
+checkCommitReadiness 6 "\"Org1MSP\": true" "\"Org2MSP\": true" "\"Org3MSP\": true" "\"Org4MSP\": true" "\"Org5MSP\": true" "\"Org6MSP\": true"
 
 ## now that we know for sure both orgs have approved, commit the definition
 commitChaincodeDefinition 1 2 3 4 5 6
