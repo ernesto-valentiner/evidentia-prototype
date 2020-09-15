@@ -35,12 +35,9 @@ async function main() {
         const network = await gateway.getNetwork('fgs-channel');
 
         // Get the contract from the network.
-        const contract = network.getContract('fabcar');
+        const contract = network.getContract('evidentia');
 
-        // Submit the specified transaction.
-        // createCar transaction - requires 5 argument, ex: ('createCar', 'CAR12', 'Honda', 'Accord', 'Black', 'Tom')
-        // changeCarOwner transaction - requires 2 args , ex: ('changeCarOwner', 'CAR12', 'Dave')
-        await contract.submitTransaction('createCar', 'CAR12', 'Honda', 'Accord', 'Black', 'Tom');
+        await contract.submitTransaction('getServiceExecution', '127.0.0.1', 'getFGModeControllerSR2', '/Users/Ernesto/BachelorThesis/etb_org2/TempRepo/File L7 L8');
         console.log('Transaction has been submitted');
 
         // Disconnect from the gateway.

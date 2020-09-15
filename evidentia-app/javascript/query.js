@@ -49,10 +49,7 @@ async function main() {
         // Get the contract from the network.
         const contract = network.getContract('evidentia');
 
-        // Evaluate the specified transaction.
-        // queryCar transaction - requires 1 argument, ex: ('queryCar', 'CAR4')
-        // queryAllCars transaction - requires no arguments, ex: ('queryAllCars')
-        const result = await contract.evaluateTransaction('requestServiceProvider', 'verification', '/invoke.js P1');
+        const result = await contract.evaluateTransaction('getServiceExecution', '127.0.0.1', 'getFGModeControllerSR2', '/Users/Ernesto/BachelorThesis/etb_org2/TempRepo/File L7 L8');
         console.log(`Transaction has been evaluated, result is: ${result.toString()}`);
 
     } catch (error) {
