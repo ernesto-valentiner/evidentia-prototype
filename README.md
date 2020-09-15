@@ -1,20 +1,19 @@
 [//]: # (SPDX-License-Identifier: CC-BY-4.0)
 
-## Hyperledger Fabric Samples
+# Distributed Evidence Network
 
-Please visit the [installation instructions](http://hyperledger-fabric.readthedocs.io/en/latest/install.html)
-to ensure you have the correct prerequisites installed. Please use the
-version of the documentation that matches the version of the software you
-intend to use to ensure alignment.
+## Network Model
+
+![alt text](/images/Prototype.png)
 
 ## Getting Started
 
-###Prerequisites
+### Prerequisites
 
 Check that all the [prerequisites](https://hyperledger-fabric.readthedocs.io/en/release-2.0/prereqs.html) are installed
 on your machine in order to run a Hyperledger Fabric Network.
 
-###Install Binaries and Docker Images
+### Install Binaries and Docker Images
 
 Enter the following line to install all the binaries and Docker Images.
 
@@ -23,7 +22,7 @@ curl -sSL https://bit.ly/2ysbOFE | bash -s -- 2.0.1 1.4.6 0.4.18
 ```
 More information can be found [here](https://hyperledger-fabric.readthedocs.io/en/release-2.0/install.html)
 
-###Installation
+### Installation
 
 Clone the repository
 
@@ -31,9 +30,9 @@ Clone the repository
 git clone https://github.com/ernesto-valentiner/evidentia-prototype.git
 ```
 
-##Usage
+## Usage
 
-###Bring the network up
+### Bring the network up
 
 After installing all the prerequisites and binaries, start the network by changing directory to evidentia-app 
 and executing ./startFabric.sh
@@ -77,14 +76,15 @@ JavaScript Application:
     node query
 ``` 
 
-###Bring the network down
+### Bring the network down
 
 To bring the network down execute the following command in the evidentia-app directory.
 ```console
 ./networkDown.sh
 ```
 
-###Next steps
+### Next steps
+
 To connect the ETBNodes with the network, follow the description in the [ETB repository](https://github.com/ernesto-valentiner/ETB).
 
 ## License <a name="license"></a>
